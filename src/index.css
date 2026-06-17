@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --color-brand-orange: #FF4E00;
+  --color-bento-bg: #0A0A0A;
+  --color-bento-card: #141414;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0A0A0A; /* Bento Grid default */
+}
+
+/* Custom dark scrollbar configuration */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 9999px;
+  border: 2px solid #09090b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c; /* Orange 600 hover color */
+}
+
+/* Custom animations for loading and fade transitions */
+@keyframes infinite-loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+.animate-infinite-loading {
+  animation: infinite-loading 1.6s infinite ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Interactive utility tags styling */
+.text-stroke-amber {
+  -webkit-text-stroke: 1px rgba(245, 158, 11, 0.2);
+}

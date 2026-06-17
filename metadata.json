@@ -1,0 +1,6 @@
+{
+  "name": "SNAPEDIT",
+  "description": "Premium portfolio website for SNAPEDIT - Professional Thumbnail Design & Video Editing services",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
